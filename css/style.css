@@ -259,3 +259,44 @@ header { width: 100%;
     line-height: 1.5;
 }
 
+#tecnologias {
+    padding: 100px 20px;
+    background-color: #0d1117;
+}
+
+.container-tecnologias {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lista-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tecnologia-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tecnologia-card:hover {
+    transform: translateY(-5px);
+    border-color: #7c3aed;
+}
+
+.tecnologia-card h3 {
+    color: #7c3aed;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.tecnologia-card p {
+    color: #8b949e;
+    font-size: 16px;
+    line-height: 1.6;
+}
