@@ -3,6 +3,14 @@
     box-sizing: border-box;
 }
 
+a, 
+button,
+.info-sobre,
+.tecnologia-card,
+.projeto-card {
+    -webkit-tap-highlight-color: rgba(124, 58, 237, 0.25);
+}
+
 html { scroll-behavior: smooth;
 }
 
@@ -52,6 +60,10 @@ header { width: 100%;
 }
 
 .menu a:hover {
+    color: #a78bfa;
+}
+
+.menu a:active {
     color: #7c3aed;
 }
 
@@ -67,6 +79,10 @@ header { width: 100%;
 }
 
 .menu a:hover::after {
+    width: 100%;
+}
+
+.menu a:active::after {
     width: 100%;
 }
 
@@ -147,6 +163,11 @@ header { width: 100%;
     transform: translateY(-2px);
 }
 
+.botao-principal:active {
+    background-color: #8b5cf6;
+    transform: translateY(-2px);
+}
+
 .botao-secundario {
     color: #f0f6fc;
     border: 1px solid #30363d;
@@ -155,6 +176,12 @@ header { width: 100%;
 
 .botao-secundario:hover {
     background-color: #7c3aed;
+    color: #7c3aed;
+    transform: translateY(-2px);
+}
+
+.botao-secundario:active {
+    border-color: #7c3aed;
     color: #7c3aed;
     transform: translateY(-2px);
 }
@@ -229,7 +256,7 @@ header { width: 100%;
 
 .informacoes-sobre {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -247,6 +274,11 @@ header { width: 100%;
     border-color: #7c3aed;
 }
 
+.info-sobre:active {
+    transform: translateY(-5px);
+    border-color: #7c3aed;
+}
+
 .info-sobre h3 {
     color: #7c3aed;
     font-size: 20px;
@@ -260,7 +292,7 @@ header { width: 100%;
 }
 
 #tecnologias {
-    padding: 100px 20px;
+    padding: 70px 20px;
     background-color: #0d1117;
 }
 
@@ -285,6 +317,11 @@ header { width: 100%;
 }
 
 .tecnologia-card:hover {
+    transform: translateY(-5px);
+    border-color: #7c3aed;
+}
+
+.tecnologia-card:active {
     transform: translateY(-5px);
     border-color: #7c3aed;
 }
@@ -326,6 +363,11 @@ header { width: 100%;
 }
 
 .projeto-card:hover {
+    transform: translateY(-6px);
+    border-color: #7c3aed;
+}
+
+.projeto-card:active {
     transform: translateY(-6px);
     border-color: #7c3aed;
 }
@@ -382,6 +424,11 @@ header { width: 100%;
     transform: translateY(-2px);
 }
 
+.botao-projeto:active {
+    background-color: #7c3aed;
+    transform: translateY(-2px);
+}
+
 #contato {
     padding: 100px 20px;
     background-color: #0d1117;
@@ -429,6 +476,11 @@ header { width: 100%;
     transform: translateY(-3px);
 }
 
+.contato-link:active {
+    background-color: #7c3aed;
+    transform: translateY(-3px);
+}
+
 footer {
     background-color: #161b22;
     border-top: 1px solid #30363d;
@@ -444,4 +496,230 @@ footer {
 .container-footer p {
     color: #8b949e;
     font-size: 14px;
+}
+
+.botao-menu {
+    display: none;
+}
+
+.botao-topo {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid #7c3aed;
+    border-radius: 50%;
+
+    background-color: #161b22;
+    color: #f0f6fc;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+
+    z-index: 900;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.botao-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+.botao-topo:hover,
+.botao-topo:active {
+    background-color: #7c3aed;
+    border-color: #7c3aed;
+}
+
+@media (max-width: 768px) {
+    .container-header {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            width: 100%;
+            z-index: 1000;
+
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+            body {
+                padding-top: 85px;
+            }
+
+                section {
+                    scroll-margin-top: 90px;
+                }
+
+                    .container-header {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        position: relative;
+                    }
+
+    .botao-topo {
+        width: 44px;
+        height: 44px;
+
+        right: 18px;
+        bottom: 18px;
+
+        font-size: 20px;
+    }
+
+    .botao-menu {
+            display: block;
+            background: transparent;
+            border: none;
+            color: #f0f6fc;
+            font-size: 30px;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+    .menu {
+        display: none;
+    }
+
+            .menu a {
+
+                width: 100%;
+                max-width: 280px;
+
+                padding: 14px 20px;
+
+                text-align: center;
+
+                color: #a8b2c1;
+
+                background-color: rgba(255, 255, 255, 0.02);
+
+                border: 1px solid #30363d;
+                border-radius: 10px;
+
+                transition:
+                color 0.2s ease,
+                background-color 0.2s ease,
+                border-color 0.2s ease;
+
+                -webkit-tap-highlight-color: transparent;
+                touch-action: manipulation;
+            
+ }
+
+            .menu a::after {
+                    display: none;
+                }
+
+
+            .menu a:active {
+                color: #f0f6fc;
+                background-color: rgba(124, 58, 237, 0.18);
+
+                border-color: #7c3aed;
+            }
+
+                .menu a:focus-visible {
+                    outline: 2px solid #7c3aed;
+                    outline-offset: 2px;
+                }
+
+            .menu.ativo {
+                display: flex;
+
+                 position: absolute;
+                 top: 100%;
+                 left: 0;
+
+                 width: 100%;
+
+                 flex-direction: column;
+                 align-items: center;
+
+                 gap: 12px;
+
+                padding: 20px;
+
+                background-color: #161b22;
+
+                border-top: 1px solid #30363d;
+                border-bottom: 1px solid #30363d;
+
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            }
+
+        .container-inicio {
+            flex-direction: column;
+            text-align: center;
+            gap: 40px;
+        }
+
+            .conteudo-inicio {
+                max-width: 100%;
+            }
+
+                .descricao-inicio {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                    .conteudo-inicio h1 {
+                        font-size: 38px;
+                    }
+
+                        .conteudo-inicio h2 {
+                            font-size: 21px;
+                        }
+
+                            .botoes-inicio {
+                                justify-content: center;
+                                flex-wrap: wrap;
+                            }
+
+                                .imagem-inicio img {
+                                    width: 280px;
+                                    height: 280px;
+                                }
+                                    .lista-tecnologias {
+                                        grid-template-columns: 1fr;
+                                        width: 100%;
+                                    }
+
+                                        .container-tecnologias {
+                                            width: 100%;
+                                        }
+
+                                            .tecnologia-card {
+                                                width: 100%;
+                                                min-width: 0;
+                                            }
+
+                                                    .lista-projetos {
+                                                        grid-template-columns: 1fr;
+                                                    }
 }
