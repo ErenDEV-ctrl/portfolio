@@ -382,3 +382,66 @@ header { width: 100%;
     transform: translateY(-2px);
 }
 
+#contato {
+    padding: 100px 20px;
+    background-color: #0d1117;
+}
+
+.container-contato {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.conteudo-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto-contato {
+    max-width: 700px;
+    color: #8b949e;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.links-contato {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contato-link {
+    display: inline-block;
+    color: #f0f6fc;
+    border: 1px solid #7c3aed;
+    border-radius: 8px;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contato-link:hover {
+    background-color: #7c3aed;
+    transform: translateY(-3px);
+}
+
+footer {
+    background-color: #161b22;
+    border-top: 1px solid #30363d;
+    padding: 25px 20px;
+}
+
+.container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-footer p {
+    color: #8b949e;
+    font-size: 14px;
+}
