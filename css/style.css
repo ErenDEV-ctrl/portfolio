@@ -11,6 +11,14 @@ button,
     -webkit-tap-highlight-color: rgba(124, 58, 237, 0.25);
 }
 
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+}
+
 html { scroll-behavior: smooth;
 }
 
@@ -548,6 +556,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+     body {
+        touch-action: pan-y;
+     }
     .container-header {
         flex-direction: row;
         justify-content: space-between;
